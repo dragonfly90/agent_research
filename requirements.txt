@@ -1,0 +1,3 @@
+duckduckgo-search
+groq
+python-dotenv
