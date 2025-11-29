@@ -38,7 +38,7 @@ wheels/
 Thumbs.db
 
 # Generated reports (optional - remove this line if you want to commit reports)
-research_report.md
+
 
 # Debug files
 debug_search.py
