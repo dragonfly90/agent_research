@@ -12,7 +12,22 @@ def summarize_results(search_results, topic="AI Agent Research"):
 
     client = Groq(api_key=api_key)
 
-    prompt = f"Please summarize the following search results about {topic}. Focus on key findings, trends, and interesting startups. Provide the output in Markdown format.\n\nSearch Results:\n{search_results}"
+    prompt = f"""Please summarize the following search results about {topic}. 
+    
+    Requirements:
+    1. **Startups**: For each startup, provide:
+       - Name
+       - **Website Link** (if found)
+       - **Revenue** (if found)
+       - **Funding** (if found)
+       - Brief description
+    2. **Big Tech**: Create a section for "Big Tech AI Agent Products" (e.g., Google Vertex AI, Azure).
+    3. **Trends**: Key findings and trends.
+    
+    Provide the output in Markdown format.
+
+    Search Results:
+    {search_results}"""
 
     try:
         response = client.chat.completions.create(
