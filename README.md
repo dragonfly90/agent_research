@@ -1,5 +1,26 @@
 # AI Agent Research Summarizer
 
+## memory systems
+Layer,Type,Mechanism,Human Analogy
+Short-Term,Context Window,KV Cache (Sliding Window Attention),Working Memory
+Episodic,Architectural,"Memory Slots / Recurrent States (e.g., Memformer)",Immediate Recall
+Long-Term,External,RAG / Vector DBs / Knowledge Graphs,Reference Books
+Parametric,Internal,Test-Time Training (TTT) / LoRA Adapters,Deep Intuition/Instinct
+
+## Test-Time Training (TTT): The "Live" Weight Update
+TTT is the cutting-edge technique where an LLM updates its own weights while it is processing a prompt.The Problem: Traditional Transformers must look back at every token in their context ($O(n^2)$ complexity). If you have a 1-million-token document, the compute cost is astronomical.The TTT Solution: Instead of "storing" tokens in a cache, the model treats the context as training data. It performs a small number of gradient steps to "compress" the document into a set of Fast Weights (often in the MLP layers).E2E-TTT (End-to-End): Research (e.g., from NVIDIA/Stanford) has introduced architectures where the model's hidden state is a machine learning model itself. As the model reads, it updates its internal representation to predict the next token better, effectively learning the "vibe" or specific facts of a long document without needing to re-read it.
+
+## Continuous and Lifelong Learning
+Continuous Learning (CL) focuses on how a model retains knowledge over months or years without Catastrophic Forgetting—the tendency of a model to "overwrite" old knowledge when learning new things.
+
+Key Strategies in 2026:
+Nested Learning: Models are designed as a "nest" of optimization problems. Different layers update at different speeds: fast layers adapt to the current conversation, while slow layers consolidate meaningful patterns into permanent memory.
+
+Titans & MIRAS: These frameworks use "associative memory" modules. When the model encounters "surprising" or high-perplexity information, it triggers a memory update, ensuring that unique experiences are prioritized for long-term storage.
+
+Token-Space Learning: Since weight updates can be unstable, some systems (like MemGPT) treat memory as a "file system" (e.g., agents.md). The model learns to read/write its own history, effectively performing continuous learning through externalized, human-readable context management.
+
+
 An automated agent that searches for and summarizes the latest AI agent research papers and startups using web search and LLM-powered summarization.
 
 ## Features
