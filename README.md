@@ -83,10 +83,18 @@ Continuous Learning (CL) focuses on how a model retains knowledge over months or
    python3 main.py
    ```
 
-5. **Run the E2E-TTT demo** (no API key needed):
+5. **Run the E2E-TTT demo** (no API key needed, pick any version):
    ```bash
-   pip install torch
+   # Pure NumPy (no dependencies beyond numpy)
    python3 ttt_e2e.py
+
+   # PyTorch version
+   pip install torch
+   python3 ttt_e2e_torch.py
+
+   # JAX/Flax version
+   pip install jax jaxlib flax optax
+   python3 ttt_e2e_jax.py
    ```
 
 ## How It Works
@@ -112,7 +120,9 @@ def search_startups(query="new AI agent startups 2024 2025", max_results=5):
 ├── searcher.py            # Web search functionality
 ├── summarizer.py          # LLM summarization
 ├── forbes_researcher.py   # Forbes AI 50 company researcher
-├── ttt_e2e.py             # Simplified E2E-TTT implementation (PyTorch)
+├── ttt_e2e.py             # E2E-TTT implementation (pure NumPy)
+├── ttt_e2e_torch.py       # E2E-TTT implementation (PyTorch)
+├── ttt_e2e_jax.py         # E2E-TTT implementation (JAX/Flax)
 ├── requirements.txt       # Python dependencies
 ├── .env.example           # Environment variable template
 ├── research_report.md     # Generated report
@@ -123,7 +133,8 @@ def search_startups(query="new AI agent startups 2024 2025", max_results=5):
 
 - **[ddgs](https://github.com/deedy5/ddgs)**: DuckDuckGo search
 - **[Groq](https://groq.com)**: Fast LLM inference (Llama 3.3 70B)
-- **[PyTorch](https://pytorch.org)**: E2E-TTT implementation
+- **[PyTorch](https://pytorch.org)**: E2E-TTT implementation (torch version)
+- **[JAX](https://github.com/jax-ml/jax)** / **[Flax](https://github.com/google/flax)**: E2E-TTT implementation (JAX version)
 - **Python 3**: Core language
 
 ## References
