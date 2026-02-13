@@ -31,7 +31,7 @@ def summarize_results(search_results, topic="AI Agent Research"):
 
     try:
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="moonshotai/kimi-k2-instruct",
             messages=[
                 {"role": "system", "content": "You are a helpful research assistant."},
                 {"role": "user", "content": prompt}
