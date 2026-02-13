@@ -51,8 +51,13 @@ Continuous Learning (CL) focuses on how a model retains knowledge over months or
 **Key Strategies:**
 
 - **Nested Learning**: Models are designed as a "nest" of optimization problems. Different layers update at different speeds: fast layers adapt to the current conversation, while slow layers consolidate meaningful patterns into permanent memory.
-- **Titans & MIRAS**: These frameworks use "associative memory" modules. When the model encounters surprising or high-perplexity information, it triggers a memory update.
+  > **Paper**: [Nested Learning: The Illusion of Deep Learning Architectures](https://abehrouz.github.io/files/NL.pdf) — [arXiv:2512.24695](https://arxiv.org/abs/2512.24695) (Behrouz et al., Google Research, NeurIPS 2025)
+  > **Code**: [github.com/obekt/HOPE-nested-learning](https://github.com/obekt/HOPE-nested-learning), [github.com/WindOfNature/Nested-Learning](https://github.com/WindOfNature/Nested-Learning)
+- **Titans**: Associative memory modules that learn to memorize at test time. When the model encounters surprising (high-perplexity) information, it triggers a memory update via gradient descent on the prediction error.
+  > **Paper**: [Titans: Learning to Memorize at Test Time](https://arxiv.org/abs/2501.00663) (Behrouz, Zhong, Mirrokni — Google Research, 2025)
 - **Token-Space Learning**: Some systems (like MemGPT) treat memory as a "file system". The model learns to read/write its own history, performing continuous learning through externalized context management.
+
+A simplified implementation of Nested Learning + Titans is available in [`nested_learning.py`](nested_learning.py).
 
 ## Prerequisites
 
@@ -95,6 +100,9 @@ Continuous Learning (CL) focuses on how a model retains knowledge over months or
    # JAX/Flax version
    pip install jax jaxlib flax optax
    python3 ttt_e2e_jax.py
+
+   # Nested Learning & Titans neural memory (pure NumPy)
+   python3 nested_learning.py
    ```
 
 ## How It Works
@@ -123,6 +131,7 @@ def search_startups(query="new AI agent startups 2024 2025", max_results=5):
 ├── ttt_e2e.py             # E2E-TTT implementation (pure NumPy)
 ├── ttt_e2e_torch.py       # E2E-TTT implementation (PyTorch)
 ├── ttt_e2e_jax.py         # E2E-TTT implementation (JAX/Flax)
+├── nested_learning.py     # Nested Learning & Titans neural memory (pure NumPy)
 ├── requirements.txt       # Python dependencies
 ├── .env.example           # Environment variable template
 ├── research_report.md     # Generated report
