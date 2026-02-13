@@ -1,37 +1,35 @@
-### Startups
-The following startups are prominent in the AI agent research space:
-* **Arya**: 
-  + Website Link: [https://www.aryaxai.com/](https://www.aryaxai.com/)
-  + Revenue: Not found
-  + Funding: Not found
-  + Brief description: Arya provides AI agent research reports, including the September '25 Edition, highlighting the latest and most impactful AI agent research.
-* **JUTEQ**: 
-  + Website Link: [https://juteq.ca/](https://juteq.ca/)
-  + Revenue: Not found
-  + Funding: Not found
-  + Brief description: JUTEQ provides research and analysis on AI agents, including the most powerful AI agent papers of 2024.
-* **Analytics Vidhya**: 
-  + Website Link: [https://www.analyticsvidhya.com/](https://www.analyticsvidhya.com/)
-  + Revenue: Not found
-  + Funding: Not found
-  + Brief description: Analytics Vidhya highlights the top 10 research papers on AI agents, showcasing key breakthroughs and methodologies.
-* **Other startups**: Various other startups, such as those listed in the "Agents 20: Top AI Agent Startups of 2025" and "Top 10 AI Agent Startups of 2025", are also making significant contributions to the AI agent research space.
+# AI Agent Research – 2025 Snapshot
 
-### Big Tech AI Agent Products
-The following big tech companies offer AI agent products:
-* **Google Vertex AI**: 
-  + Website Link: [https://cloud.google.com/vertex-ai](https://cloud.google.com/vertex-ai)
-  + Description: Google Vertex AI is a comprehensive platform for building, training, and deploying AI models, including AI agents.
-* **Microsoft Azure AI**: 
-  + Website Link: [https://azure.microsoft.com/en-us/services/cognitive-services/](https://azure.microsoft.com/en-us/services/cognitive-services/)
-  + Description: Microsoft Azure AI is a set of AI services and tools that enable developers and data scientists to build, train, and deploy AI models, including AI agents.
-* **Amazon Bedrock**: 
-  + Website Link: [https://aws.amazon.com/machine-learning/bedrock/](https://aws.amazon.com/machine-learning/bedrock/)
-  + Description: Amazon Bedrock is a platform that provides access to foundation models, enabling businesses to build and deploy AI agents.
+---
 
-### Trends
-Key findings and trends in the AI agent research space include:
-* **Increased funding**: AI agent startups have raised significant funding in 2024 and 2025, with projections reaching $6.7 billion by the end of 2025.
-* **Growing interest**: AI agents have become a popular tech trend, with many research papers and startups focused on developing and improving AI agents.
-* **Improving capabilities**: AI agents are becoming more sophisticated, with the ability to handle complex tasks and provide valuable insights.
-* **Big tech involvement**: Big tech companies, such as Google, Microsoft, and Amazon, are investing in AI agent research and development, providing platforms and tools for building and deploying AI agents.
+## 1. Startups
+
+| Name | Website | Revenue (2025) | Funding (latest) | 1-sentence pitch |
+|------|---------|---------------|----------------|------------------|
+| Anthropic | [anthropic.com](https://www.anthropic.com) | $2.2 B | ≈ $7.6 B raised | Maker of Claude & “computer-use” agents; 220× revenue jump in 3 yrs. |
+| Nebius | [nebius.ai](https://nebius.ai) | $0.6 B* | Public (NL:) >$1 B cap | European cloud + GPU-as-a-service built for training & hosting AI agents. |
+| **Representative EU agent startups** (Sifted list) | – | – | $20 m – $130 m each | French, German & UK cohorts automating sales, legal and dev-ops with vertical agents. |
+
+\* Revenue from continuing AI infra ops (ex-Yandex).  
+Forbes AI50 2025 notes >50 agent-centric startups; only Anthropic & Nebius disclosed 2025 revenue.
+
+---
+
+## 2. Big-Tech AI-Agent Products
+
+| Product | 2025 Highlights |
+|---------|----------------|
+| Google Vertex AI Agent Builder | No-code console + 200+ foundation models; up to $300 free credits for new GCP users. |
+| Amazon Bedrock | Managed agents that call APIs & RAG knowledge bases; claims >100 k orgs in production. |
+| Azure AI Foundry (ex-Azure OpenAI Service) | Multi-agent orchestration, enterprise security & SLAs; direct competitor to Bedrock & Vertex. |
+
+---
+
+## 3. Key Trends & Research Findings
+
+1. **Vertical-first agents** – Startups move from general chatbots to domain-specific agents (legal, finance, bio-lab automation).  
+2. **Tool-use & “mixture-of-tools”** – Papers on TUMIX and ARE show test-time scaling by letting agents pick APIs or code sandboxes.  
+3. **Multi-agent collaboration** – Research focus on role-playing, debate and consensus protocols to raise reasoning accuracy.  
+4. **Evaluation crisis** – New benchmarks (AgentBench, GAIA, etc.) appear monthly; community calls for unified eval suites.  
+5. **Safety & alignment** – Anthropic’s “computer-use” agents rekindle worries on autonomous action; red-team datasets released.  
+6. **Funding bifurcation** – 7 AI agent companies raised ≥$1 B rounds in 2024-25; simultaneously, EU seed rounds shrink, pushing startups toward vertical niches.
