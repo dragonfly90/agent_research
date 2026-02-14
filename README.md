@@ -1,5 +1,7 @@
 # AI Agent Research Summarizer
 
+**GitHub**: https://github.com/dragonfly90/agent_research
+
 An automated agent that searches for and summarizes the latest AI agent research papers and startups using web search and LLM-powered summarization.
 
 ## Features
@@ -122,21 +124,20 @@ def search_startups(query="new AI agent startups 2024 2025", max_results=5):
 
 ## Project Structure
 
-```
-.
-├── main.py                # Main application entry point
-├── searcher.py            # Web search functionality
-├── summarizer.py          # LLM summarization
-├── forbes_researcher.py   # Forbes AI 50 company researcher
-├── ttt_e2e.py             # E2E-TTT implementation (pure NumPy)
-├── ttt_e2e_torch.py       # E2E-TTT implementation (PyTorch)
-├── ttt_e2e_jax.py         # E2E-TTT implementation (JAX/Flax)
-├── nested_learning.py     # Nested Learning & Titans neural memory (pure NumPy)
-├── requirements.txt       # Python dependencies
-├── .env.example           # Environment variable template
-├── research_report.md     # Generated report
-└── forbes_ai_50_report.md # Forbes AI 50 report
-```
+| File | Description |
+|------|-------------|
+| [main.py](https://github.com/dragonfly90/agent_research/blob/main/main.py) | Main application entry point |
+| [searcher.py](https://github.com/dragonfly90/agent_research/blob/main/searcher.py) | Web search functionality (DuckDuckGo) |
+| [summarizer.py](https://github.com/dragonfly90/agent_research/blob/main/summarizer.py) | LLM summarization (Groq) |
+| [forbes_researcher.py](https://github.com/dragonfly90/agent_research/blob/main/forbes_researcher.py) | Forbes AI 50 company researcher |
+| [ttt_e2e.py](https://github.com/dragonfly90/agent_research/blob/main/ttt_e2e.py) | E2E-TTT implementation (pure NumPy) |
+| [ttt_e2e_torch.py](https://github.com/dragonfly90/agent_research/blob/main/ttt_e2e_torch.py) | E2E-TTT implementation (PyTorch) |
+| [ttt_e2e_jax.py](https://github.com/dragonfly90/agent_research/blob/main/ttt_e2e_jax.py) | E2E-TTT implementation (JAX/Flax) |
+| [nested_learning.py](https://github.com/dragonfly90/agent_research/blob/main/nested_learning.py) | Nested Learning & Titans neural memory (pure NumPy) |
+| [requirements.txt](https://github.com/dragonfly90/agent_research/blob/main/requirements.txt) | Python dependencies |
+| [.env.example](https://github.com/dragonfly90/agent_research/blob/main/.env.example) | Environment variable template |
+| [research_report.md](https://github.com/dragonfly90/agent_research/blob/main/research_report.md) | Generated AI agent research report |
+| [forbes_ai_50_report.md](https://github.com/dragonfly90/agent_research/blob/main/forbes_ai_50_report.md) | Forbes AI 50 companies report |
 
 ## Technologies Used
 
@@ -148,9 +149,11 @@ def search_startups(query="new AI agent startups 2024 2025", max_results=5):
 
 ## References
 
-- [End-to-End Test-Time Training for Long Context](https://test-time-training.github.io/e2e.pdf) (Tandon et al., 2025)
+- [End-to-End Test-Time Training for Long Context](https://test-time-training.github.io/e2e.pdf) (Tandon et al., 2025) — [arXiv](https://arxiv.org/abs/2512.23675) | [Code](https://github.com/test-time-training/e2e)
 - [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](https://arxiv.org/abs/2407.04620) (Sun et al., 2024)
-- [Titans: Learning to Memorize at Test Time](https://arxiv.org/abs/2501.00663) (Behrouz et al., 2025)
+- [Nested Learning: The Illusion of Deep Learning Architectures](https://abehrouz.github.io/files/NL.pdf) (Behrouz et al., NeurIPS 2025) — [arXiv](https://arxiv.org/abs/2512.24695) | [Code](https://github.com/obekt/HOPE-nested-learning)
+- [Titans: Learning to Memorize at Test Time](https://arxiv.org/abs/2501.00663) (Behrouz, Zhong, Mirrokni, 2025)
+- [Google Research Blog: Introducing Nested Learning](https://research.google/blog/introducing-nested-learning-a-new-ml-paradigm-for-continual-learning/)
 
 ## License
 
