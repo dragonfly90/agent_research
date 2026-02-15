@@ -2,6 +2,8 @@
 
 **GitHub**: https://github.com/dragonfly90/agent_research
 
+**Related**: [JAX Learning Tutorials](https://github.com/dragonfly90/jax_learning) — 13 hands-on JAX/Flax tutorials from basics to distributed training (vmap, pmap, sharding, flash attention, transformers, TPU)
+
 An automated agent that searches for and summarizes the latest AI agent research papers and startups using web search and LLM-powered summarization.
 
 ## Features
