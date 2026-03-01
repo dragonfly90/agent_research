@@ -22,6 +22,18 @@ An automated agent that searches for and summarizes the latest AI agent research
 | Long-Term | External | RAG / Vector DBs / Knowledge Graphs | Reference Books |
 | Parametric | Internal | Test-Time Training (TTT) / LoRA Adapters | Deep Intuition/Instinct |
 
+## External Memory Systems: Production Frameworks
+
+> 📄 **Full Deep Dive**: [memory_systems_research.md](memory_systems_research.md) — detailed architecture diagrams, benchmarks, and comparison tables for all 5 systems
+
+| System | Architecture | Key Innovation | Open Source |
+|--------|-------------|----------------|-------------|
+| **[Mem0](https://mem0.ai)** | Extract-Update pipeline + Hybrid DB (Vector+Graph+KV) | Dual-phase memory consolidation; 91% faster, 90% less tokens vs. full context | ✅ ($24M funded, Oct 2025) |
+| **[Zep](https://getzep.com)** | Temporal Knowledge Graph (Graphiti engine) | Bi-temporal model captures *when* things happened; +18.5% LongMemEval accuracy | Partially (core Apache 2.0) |
+| **[Letta](https://letta.ai)** | LLM-OS / self-editing memory blocks (formerly MemGPT) | The **agent itself** manages memory via tool calls — core/recall/archival hierarchy | ✅ (UC Berkeley + Stanford) |
+| **[EverMemOS](https://evermind.ai)** | 4-layer brain-inspired OS (Agentic/Memory/Index/API) | Active memory with fusion+decision mechanisms; 92.3% LoCoMo, 70% token savings | ✅ (Released Dec 2025, backed by OpenAI) |
+| **[OpenViking](https://github.com/volcengine/OpenViking)** | Hierarchical Virtual File System (`viking://` URIs) | Tiered context loading L0/L1/L2; recursive retrieval vs. flat RAG | ✅ (ByteDance Volcengine) |
+
 ## Test-Time Training (TTT): The "Live" Weight Update
 
 TTT is a cutting-edge technique where an LLM updates its own weights while processing a prompt.
@@ -140,6 +152,7 @@ def search_startups(query="new AI agent startups 2024 2025", max_results=5):
 | [.env.example](https://github.com/dragonfly90/agent_research/blob/main/.env.example) | Environment variable template |
 | [research_report.md](https://github.com/dragonfly90/agent_research/blob/main/research_report.md) | Generated AI agent research report |
 | [forbes_ai_50_report.md](https://github.com/dragonfly90/agent_research/blob/main/forbes_ai_50_report.md) | Forbes AI 50 companies report |
+| [memory_systems_research.md](https://github.com/dragonfly90/agent_research/blob/main/memory_systems_research.md) | Deep dive: Mem0, Zep, Letta, EverMemOS, OpenViking |
 
 ## Technologies Used
 
@@ -156,6 +169,15 @@ def search_startups(query="new AI agent startups 2024 2025", max_results=5):
 - [Nested Learning: The Illusion of Deep Learning Architectures](https://abehrouz.github.io/files/NL.pdf) (Behrouz et al., NeurIPS 2025) — [arXiv](https://arxiv.org/abs/2512.24695) | [Code](https://github.com/obekt/HOPE-nested-learning)
 - [Titans: Learning to Memorize at Test Time](https://arxiv.org/abs/2501.00663) (Behrouz, Zhong, Mirrokni, 2025)
 - [Google Research Blog: Introducing Nested Learning](https://research.google/blog/introducing-nested-learning-a-new-ml-paradigm-for-continual-learning/)
+
+### External Memory Systems
+- [Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory](https://github.com/mem0ai/mem0) — $24M funded (Oct 2025)
+- [Graphiti: A Temporal Knowledge Graph for AI Agents](https://arxiv.org/abs/2501.13956) (Zep, 2025) — +18.5% LongMemEval accuracy
+- [MemGPT: Towards LLMs as Operating Systems](https://arxiv.org/abs/2310.08560) (Packer et al., 2023) — now [Letta](https://letta.ai)
+- [EverMemOS: Brain-Inspired Memory OS for AI Agents](https://evermind.ai) — 92.3% LoCoMo benchmark (EverMind, Dec 2025)
+- [OpenViking: Virtual File System Context Database for AI Agents](https://github.com/volcengine/OpenViking) — ByteDance Volcengine, `viking://` URI paradigm
+
+
 
 ## License
 
